@@ -153,6 +153,7 @@
     </div>
     <footer>
             <div class="container">
+                    <a href="../data/friends.js">Find Your New Friends!</a>
                 <span> </span>
                 <div class="two-toned-footer-color"></div>
                 <p class="text-muted text-muted-footer text-center">
@@ -194,7 +195,7 @@
             };
             var currentURL = window.location.origin;
 
-            $.post(currentURL + "/api/friends", newUser, function (data) {
+            $.post(currentURL + "../data/friends.js", newUser, function (data) {
                 $("#bestFriend").text(data.name);
                 $("#bestFriendPhoto").attr("src", data.photo);
                 $("#bestFriendModal").modal("toggle");
