@@ -1,4 +1,4 @@
-var friends = require("../data/friends");
+  var friends = require("../data/friends");
 
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
@@ -13,7 +13,6 @@ module.exports = function(app) {
     for(var i = 0; i < user.scores.length; i++) {
       user.scores[i] = parseInt(user.scores[i]);
     }
-
     var bestFriendIndex = 0;
     var minimumDifference = 40;
 
