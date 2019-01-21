@@ -5,7 +5,7 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8889;
 
-// app.use("/static", express.static(path.join(__dirname + "/App/Public")));
+app.use("/static", express.static(path.join(__dirname + "/app/public")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,5 +16,5 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 app.listen(PORT, function () {
-  console.log("App listening on PORT: " + PORT);
+  console.log("app listening on PORT: " + PORT);
 });
